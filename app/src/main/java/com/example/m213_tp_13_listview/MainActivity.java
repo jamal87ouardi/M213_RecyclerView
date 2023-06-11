@@ -31,12 +31,14 @@ public class MainActivity extends AppCompatActivity {
         movies.add(new Movie(1001,"Ninja Turtels","https://lumiere-a.akamaihd.net/v1/images/image_b3c7d632.jpeg"));
         movies.add(new Movie(1003,"Into the Wild","https://assets.mubicdn.net/images/film/340/image-w856.jpg"));
 
+        // Set the layout manager (e.g., LinearLayoutManager)
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+
         MovieAdapter ma = new MovieAdapter(movies);
         recyclerView.setAdapter(ma);
 
-        // Set the layout manager (e.g., LinearLayoutManager)
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
+
 
 
 
